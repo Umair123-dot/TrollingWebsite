@@ -1,0 +1,28 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"deploy": "prisma migrate dev --name init --preview-feature",
+		"postdeploy": "npm run generate:dev",
+		"generate:dev": "prisma generate",
+		"dev": "nodemon .",
+		"start": "node ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@prisma/client": "^2.18.0",
+		"apollo-server": "^2.21.1",
+		"apollo-server-express": "^2.21.1",
+		"bcryptjs": "^2.4.3",
+		"graphql": "^15.5.0",
+		"jsonwebtoken": "^8.5.1",
+		"nodemon": "^2.0.7"
+	},
+	"devDependencies": {
+		"prisma": "^2.18.0"
+	}
+}
