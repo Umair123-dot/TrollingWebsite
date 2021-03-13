@@ -16,6 +16,7 @@ module.exports = gql`
 
 	extend type Query {
 		websites: [Website!]!
+		webiste: Webiste!
 	}
 	extend type Mutation {
 		post(url: String!, title: String, status: Status): Website! @auth
